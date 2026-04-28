@@ -1,0 +1,222 @@
+[
+  {
+    "id": "extra1",
+    "week": 0,
+    "question": "The concept of 'planetary boundaries' refers to ___.",
+    "options": [
+      "national borders of countries",
+      "limits within which humanity can safely operate",
+      "ocean depth boundaries",
+      "atmospheric boundaries between layers"
+    ],
+    "correctAnswer": "limits within which humanity can safely operate"
+  },
+  {
+    "id": "extra2",
+    "week": 0,
+    "question": "The triple bottom line framework measures performance across ___.",
+    "options": [
+      "profit, power, politics",
+      "people, planet, profit",
+      "process, product, profit",
+      "planning, people, process"
+    ],
+    "correctAnswer": "people, planet, profit"
+  },
+  {
+    "id": "extra3",
+    "week": 0,
+    "question": "Which of the following best defines 'circular economy'?",
+    "options": [
+      "an economy that prioritizes only circular industries",
+      "a system that eliminates waste through reuse and recycling",
+      "an economic model focused on circular trade routes",
+      "none of the above"
+    ],
+    "correctAnswer": "a system that eliminates waste through reuse and recycling"
+  },
+  {
+    "id": "extra4",
+    "week": 0,
+    "question": "The Kyoto Protocol was the first international treaty to set binding targets for ___.",
+    "options": [
+      "biodiversity conservation",
+      "reducing greenhouse gas emissions",
+      "ocean protection",
+      "deforestation reduction"
+    ],
+    "correctAnswer": "reducing greenhouse gas emissions"
+  },
+  {
+    "id": "extra5",
+    "week": 0,
+    "question": "Which decade did UNESCO launch the Decade of Education for Sustainable Development?",
+    "options": ["1990-1999", "2000-2009", "2005-2014", "2015-2024"],
+    "correctAnswer": "2005-2014"
+  },
+  {
+    "id": "extra6",
+    "week": 0,
+    "question": "Biophilic design in education refers to ___.",
+    "options": [
+      "using biological experiments in classrooms",
+      "incorporating nature and natural elements into learning spaces",
+      "teaching biology in schools",
+      "designing laboratories for bio-research"
+    ],
+    "correctAnswer": "incorporating nature and natural elements into learning spaces"
+  },
+  {
+    "id": "extra7",
+    "week": 0,
+    "question": "The concept of 'intergenerational equity' in sustainability means ___.",
+    "options": [
+      "equal pay across all generations",
+      "meeting present needs without compromising future generations' ability to meet theirs",
+      "transferring wealth across generations",
+      "equal education opportunities for all age groups"
+    ],
+    "correctAnswer": "meeting present needs without compromising future generations' ability to meet theirs"
+  },
+  {
+    "id": "extra8",
+    "week": 0,
+    "question": "Which of the following is NOT one of the 17 SDGs?",
+    "options": [
+      "Zero Hunger",
+      "Life Below Water",
+      "Zero Unemployment",
+      "Quality Education"
+    ],
+    "correctAnswer": "Zero Unemployment"
+  },
+  {
+    "id": "extra9",
+    "week": 0,
+    "question": "Green Infrastructure refers to ___.",
+    "options": [
+      "buildings painted green",
+      "nature-based solutions to manage water and provide ecosystem services",
+      "roads built with green materials",
+      "solar panels on buildings"
+    ],
+    "correctAnswer": "nature-based solutions to manage water and provide ecosystem services"
+  },
+  {
+    "id": "extra10",
+    "week": 0,
+    "question": "The IPCC was established in ___.",
+    "options": ["1972", "1988", "1992", "1997"],
+    "correctAnswer": "1988"
+  },
+  {
+    "id": "extra11",
+    "week": 0,
+    "question": "Sustainable consumption means ___.",
+    "options": [
+      "consuming as much as possible",
+      "using resources in a way that meets current needs without depleting future resources",
+      "consuming only natural products",
+      "consuming only local products"
+    ],
+    "correctAnswer": "using resources in a way that meets current needs without depleting future resources"
+  },
+  {
+    "id": "extra12",
+    "week": 0,
+    "question": "Which of the following is a key pillar of sustainable development?",
+    "options": [
+      "Economic growth only",
+      "Environmental protection only",
+      "Social equity, economic growth, and environmental protection",
+      "Political stability only"
+    ],
+    "correctAnswer": "Social equity, economic growth, and environmental protection"
+  },
+  {
+    "id": "extra13",
+    "week": 0,
+    "question": "The term 'carbon footprint' refers to ___.",
+    "options": [
+      "footprints left on carbon paper",
+      "total greenhouse gas emissions caused by an individual or organization",
+      "the size of a coal mine",
+      "carbon stored in forests"
+    ],
+    "correctAnswer": "total greenhouse gas emissions caused by an individual or organization"
+  },
+  {
+    "id": "extra14",
+    "week": 0,
+    "question": "Which body oversees the implementation of the Paris Agreement?",
+    "options": ["IPCC", "WMO", "UNFCCC", "WHO"],
+    "correctAnswer": "UNFCCC"
+  },
+  {
+    "id": "extra15",
+    "week": 0,
+    "question": "Agroforestry is best described as ___.",
+    "options": [
+      "large-scale forest agriculture",
+      "integrating trees and shrubs into crop and animal farming systems",
+      "growing food inside forests",
+      "replacing forests with agricultural land"
+    ],
+    "correctAnswer": "integrating trees and shrubs into crop and animal farming systems"
+  },
+  {
+    "id": "extra16",
+    "week": 0,
+    "question": "The Earth Overshoot Day marks ___.",
+    "options": [
+      "the day Earth formed",
+      "when humanity has used up nature's annual resource budget",
+      "the coldest day of the year",
+      "the day of maximum solar radiation"
+    ],
+    "correctAnswer": "when humanity has used up nature's annual resource budget"
+  },
+  {
+    "id": "extra17",
+    "week": 0,
+    "question": "Which of the following is considered a soft skill critical for ESD?",
+    "options": [
+      "advanced mathematics",
+      "critical thinking and collaboration",
+      "programming",
+      "financial accounting"
+    ],
+    "correctAnswer": "critical thinking and collaboration"
+  },
+  {
+    "id": "extra18",
+    "week": 0,
+    "question": "The Millennium Ecosystem Assessment (2005) found that ___ of ecosystem services are being degraded or used unsustainably.",
+    "options": ["15%", "40%", "60%", "80%"],
+    "correctAnswer": "60%"
+  },
+  {
+    "id": "extra19",
+    "week": 0,
+    "question": "Which of these is a key feature of transformative learning in ESD?",
+    "options": [
+      "memorizing facts",
+      "questioning and changing underlying assumptions",
+      "rote learning of SDGs",
+      "avoiding group discussions"
+    ],
+    "correctAnswer": "questioning and changing underlying assumptions"
+  },
+  {
+    "id": "extra20",
+    "week": 0,
+    "question": "SDG 13 specifically addresses ___.",
+    "options": [
+      "clean water",
+      "climate action",
+      "zero hunger",
+      "quality education"
+    ],
+    "correctAnswer": "climate action"
+  }
+]
