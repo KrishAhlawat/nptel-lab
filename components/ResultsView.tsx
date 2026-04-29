@@ -70,26 +70,28 @@ export default function ResultsView({ questions, selectedAnswers, onRetry, title
         </div>
       )}
 
-      {/* Breakdown */}
-      <div className="space-y-2 mb-6">
-        {questions.map((q, i) => {
+      {/* Breakdown — incorrect first, then correct */}
+      {(() => {
+        const incorrect = questions.filter((q) => selectedAnswers[q.id] !== q.correctAnswer);
+        const correct = questions.filter((q) => selectedAnswers[q.id] === q.correctAnswer);
+        const renderCard = (q: Question, label: number) => {
           const isCorrect = selectedAnswers[q.id] === q.correctAnswer;
           const userAnswer = selectedAnswers[q.id];
           return (
-            <div key={q.id} className={`border rounded-xl p-4 ${isCorrect ? "border-[#22c55e]/20" : "border-[#1f1f1f]"}`}>
+            <div key={q.id} className={`border rounded-xl p-4 ${isCorrect ? "border-[#22c55e]/20" : "border-[#3f3f46]/60"}`}>
               <div className="flex items-start gap-3">
                 {isCorrect
                   ? <CheckCircle className="w-3.5 h-3.5 text-[#22c55e] shrink-0 mt-0.5" />
-                  : <XCircle className="w-3.5 h-3.5 text-[#71717a] shrink-0 mt-0.5" />}
+                  : <XCircle className="w-3.5 h-3.5 text-[#ef4444]/70 shrink-0 mt-0.5" />}
                 <div className="flex-1 min-w-0">
                   <p className="text-xs text-[#a1a1aa] mb-1.5 leading-relaxed">
-                    <span className="text-[#71717a] mr-1">{i + 1}.</span>{q.question}
+                    <span className="text-[#71717a] mr-1">{label}.</span>{q.question}
                   </p>
                   {!isCorrect && (
                     <div className="space-y-0.5">
                       {userAnswer
                         ? <p className="text-[11px] text-[#71717a]">Your answer: {userAnswer}</p>
-                        : <p className="text-[11px] text-[#71717a]">Not answered</p>}
+                        : <p className="text-[11px] text-[#52525b]">Not answered</p>}
                       <p className="text-[11px] text-[#22c55e]">Correct: {q.correctAnswer}</p>
                     </div>
                   )}
@@ -97,8 +99,31 @@ export default function ResultsView({ questions, selectedAnswers, onRetry, title
               </div>
             </div>
           );
-        })}
-      </div>
+        };
+        return (
+          <div className="space-y-2 mb-6">
+            {incorrect.length > 0 && (
+              <>
+                <p className="text-[11px] text-[#ef4444]/70 uppercase tracking-wider font-medium px-1 mb-1">
+                  Incorrect · {incorrect.length}
+                </p>
+                {incorrect.map((q, i) => renderCard(q, i + 1))}
+              </>
+            )}
+            {correct.length > 0 && (
+              <>
+                <div className="flex items-center gap-3 pt-3 pb-1">
+                  <p className="text-[11px] text-[#22c55e] uppercase tracking-wider font-medium px-1">
+                    Correct · {correct.length}
+                  </p>
+                  <div className="flex-1 h-px bg-[#1f1f1f]" />
+                </div>
+                {correct.map((q, i) => renderCard(q, incorrect.length + i + 1))}
+              </>
+            )}
+          </div>
+        );
+      })()}
 
 
       {/* Fixed bottom action bar */}

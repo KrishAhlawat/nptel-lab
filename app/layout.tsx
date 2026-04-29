@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   title: "NPTEL Lab — Practice. Experiment. Master.",
   description:
     "A calm, distraction-free platform to practice and revise MCQs for Education for Sustainable Development. 12 weeks, 120 questions.",
-  keywords: ["NPTEL", "ESD", "MCQ", "quiz", "Education for Sustainable Development"],
+  keywords: [
+    "NPTEL",
+    "ESD",
+    "MCQ",
+    "quiz",
+    "Education for Sustainable Development",
+  ],
 };
 
 export default function RootLayout({
@@ -15,7 +21,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="bg-[#0a0a0a] text-[#f4f4f5] antialiased min-h-screen">
+      <body
+        className="bg-[#0a0a0a] text-[#f4f4f5] antialiased min-h-screen"
+        cz-shortcut-listen="true"
+      >
         <Navbar />
         <main className="min-h-[calc(100vh-56px)]">{children}</main>
         <Analytics />

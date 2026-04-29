@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
-import { Send } from "lucide-react";
+import { useState, useCallback } from "react";
+import { Send, Shuffle, AlignJustify } from "lucide-react";
 import questionsData from "@/data/nptel_lab_questions.json";
 import type { Question } from "@/types";
 import Timer from "@/components/Timer";
@@ -19,21 +19,31 @@ function shuffleArray<T>(arr: T[]): T[] {
   return a;
 }
 
+// A question with its options potentially shuffled for display
+interface DisplayQuestion extends Question {
+  displayOptions: string[];
+}
+
 type Phase = "setup" | "quiz" | "results";
 
 export default function QuizPage() {
   const [phase, setPhase] = useState<Phase>("setup");
   const [quizMode, setQuizMode] = useState<"week" | "full">("week");
   const [pickWeek, setPickWeek] = useState<number>(1);
-  const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
+  const [randomizeQuestions, setRandomizeQuestions] = useState(true);
+  const [shuffleAnswers, setShuffleAnswers] = useState(false);
+  const [quizQuestions, setQuizQuestions] = useState<DisplayQuestion[]>([]);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [elapsed, setElapsed] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
 
   const startQuiz = () => {
-    const qs = quizMode === "full"
-      ? shuffleArray(allQuestions)
-      : shuffleArray(allQuestions.filter((q) => q.week === pickWeek));
+    let base = quizMode === "full" ? allQuestions : allQuestions.filter((q) => q.week === pickWeek);
+    if (randomizeQuestions) base = shuffleArray(base);
+    const qs: DisplayQuestion[] = base.map((q) => ({
+      ...q,
+      displayOptions: shuffleAnswers ? shuffleArray(q.options) : q.options,
+    }));
     setQuizQuestions(qs);
     setSelectedAnswers({});
     setElapsed(0);
@@ -72,6 +82,7 @@ export default function QuizPage() {
           <p className="text-sm text-[#71717a]">Answer at your own pace. Timer tracks how long you take.</p>
         </div>
 
+        {/* Mode toggle */}
         <div className="flex rounded-xl border border-[#1f1f1f] overflow-hidden mb-6">
           <button onClick={() => setQuizMode("week")}
             className={`flex-1 py-2.5 text-sm font-medium transition-all ${quizMode === "week" ? "bg-[#22c55e]/8 text-[#22c55e]" : "text-[#71717a] hover:text-white"}`}>
@@ -91,9 +102,46 @@ export default function QuizPage() {
         )}
         {quizMode === "full" && (
           <div className="mb-6 p-4 rounded-xl border border-[#1f1f1f]">
-            <p className="text-sm text-[#a1a1aa]">120 questions · All 12 weeks, randomized</p>
+            <p className="text-sm text-[#a1a1aa]">120 questions · All 12 weeks</p>
           </div>
         )}
+
+        {/* Quiz options */}
+        <div className="mb-6 space-y-2">
+          <p className="text-xs text-[#52525b] uppercase tracking-wider mb-3">Options</p>
+          <button
+            onClick={() => setRandomizeQuestions((v) => !v)}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all ${
+              randomizeQuestions
+                ? "border-[#22c55e]/30 bg-[#22c55e]/6 text-[#22c55e]"
+                : "border-[#1f1f1f] text-[#71717a] hover:border-[#3f3f46] hover:text-white"
+            }`}
+          >
+            <Shuffle className="w-4 h-4 shrink-0" />
+            <span className="flex-1 text-left">Randomize question order</span>
+            <span className={`text-xs px-2 py-0.5 rounded-md font-medium ${
+              randomizeQuestions ? "bg-[#22c55e]/15 text-[#22c55e]" : "bg-[#1f1f1f] text-[#52525b]"
+            }`}>
+              {randomizeQuestions ? "On" : "Off"}
+            </span>
+          </button>
+          <button
+            onClick={() => setShuffleAnswers((v) => !v)}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all ${
+              shuffleAnswers
+                ? "border-[#22c55e]/30 bg-[#22c55e]/6 text-[#22c55e]"
+                : "border-[#1f1f1f] text-[#71717a] hover:border-[#3f3f46] hover:text-white"
+            }`}
+          >
+            <AlignJustify className="w-4 h-4 shrink-0" />
+            <span className="flex-1 text-left">Shuffle answer choices</span>
+            <span className={`text-xs px-2 py-0.5 rounded-md font-medium ${
+              shuffleAnswers ? "bg-[#22c55e]/15 text-[#22c55e]" : "bg-[#1f1f1f] text-[#52525b]"
+            }`}>
+              {shuffleAnswers ? "On" : "Off"}
+            </span>
+          </button>
+        </div>
 
         <button onClick={startQuiz}
           className="w-full py-3 rounded-xl bg-[#22c55e] text-black font-semibold text-sm hover:bg-[#16a34a] transition-colors">
@@ -139,7 +187,7 @@ export default function QuizPage() {
                 <p className="text-white text-sm leading-relaxed">{question.question}</p>
               </div>
               <div className="space-y-2 pl-9">
-                {question.options.map((option, oi) => {
+                {question.displayOptions.map((option, oi) => {
                   const isSelected = option === selected;
                   return (
                     <button key={oi}
