@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { BookOpen, Zap, Dumbbell, Layers, ArrowRight } from "lucide-react";
+import { BookOpen, Zap, Dumbbell, Layers, ArrowRight, GraduationCap } from "lucide-react";
 
 const actions = [
   {
@@ -18,6 +18,13 @@ const actions = [
     desc: "Timed · scroll through all questions · submit at end",
     icon: Zap,
     color: "text-white",
+  },
+  {
+    href: "/pyqs",
+    label: "PYQs",
+    desc: "120 previous year questions · learn or quiz mode",
+    icon: GraduationCap,
+    color: "text-[#22c55e]",
   },
   {
     href: "/practice",
@@ -59,7 +66,7 @@ export default function HomePage() {
             <span>·</span>
             <span>120 questions</span>
             <span>·</span>
-            <span>20 extras</span>
+            <span>120 PYQs</span>
           </div>
         </div>
 

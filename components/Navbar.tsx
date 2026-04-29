@@ -13,6 +13,7 @@ import {
   Menu,
   X,
   FlaskConical,
+  GraduationCap,
 } from "lucide-react";
 
 const navLinks = [
@@ -21,6 +22,7 @@ const navLinks = [
   { href: "/quiz", label: "Quiz", icon: Zap },
   { href: "/all", label: "All Questions", icon: LayoutGrid },
   { href: "/practice", label: "Practice", icon: Dumbbell },
+  { href: "/pyqs", label: "PYQs", icon: GraduationCap },
 ];
 
 export default function Navbar() {
