@@ -30,9 +30,9 @@ type Phase = "setup" | "quiz" | "results";
 /* ---------- small setup controls ---------- */
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="grid gap-3 py-5 sm:grid-cols-[8rem_1fr] sm:items-center">
+    <div className="grid grid-cols-1 gap-3 py-5 sm:grid-cols-[8rem_1fr] sm:items-center">
       <p className="text-sm text-[#a1a1aa]">{label}</p>
-      <div>{children}</div>
+      <div className="min-w-0">{children}</div>
     </div>
   );
 }

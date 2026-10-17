@@ -12,18 +12,14 @@ export default function WeekSelector({
   allowAll?: boolean;
 }) {
   const chip = (on: boolean) =>
-    `h-10 min-w-[2.5rem] shrink-0 rounded-md border px-3 text-sm tabular-nums transition-colors sm:h-9 sm:min-w-[2.25rem] ${
+    `h-10 w-full rounded-md border text-sm tabular-nums transition-colors sm:h-9 sm:w-auto sm:min-w-[2.25rem] sm:px-3 ${
       on
         ? "border-[#22c55e]/50 bg-[#22c55e]/10 text-[#22c55e]"
         : "border-[#1f1f1f] text-[#a1a1aa] hover:border-[#3f3f46] hover:text-white"
     }`;
 
   return (
-    <div
-      role="group"
-      aria-label="Week"
-      className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
-    >
+    <div role="group" aria-label="Week" className="grid grid-cols-7 gap-1.5 sm:flex sm:flex-wrap">
       {allowAll && (
         <button aria-pressed={selectedWeek === null} onClick={() => onSelect(null)} className={chip(selectedWeek === null)}>
           All
