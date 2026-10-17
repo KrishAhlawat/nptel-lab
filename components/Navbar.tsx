@@ -7,7 +7,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/learn", label: "Learn" },
   { href: "/quiz", label: "Quiz" },
-  // { href: "/pyqs", label: "PYQs" }, // re-enable when the PYQs page is back
+  { href: "/pyqs", label: "PYQs" }, // re-enable when the PYQs page is back
   { href: "/review", label: "Review" },
 ];
 

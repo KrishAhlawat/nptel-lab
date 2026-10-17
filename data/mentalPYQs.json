@@ -1,0 +1,242 @@
+[
+  {
+    "id": "w1q1",
+    "week": 1,
+    "question": "What is mental well-being?",
+    "options": [
+      "Absence of mental illness",
+      "Emotional, psychological, and social well-being, affecting how we think, feel, and act",
+      "A state of complete happiness at all times",
+      "Having a high IQ and academic success"
+    ],
+    "correctAnswer": "Emotional, psychological, and social well-being, affecting how we think, feel, and act"
+  },
+  {
+    "id": "w1q2",
+    "week": 1,
+    "question": "Which of the following is a common emotional change during adolescence?",
+    "options": [
+      "Constant mental stability",
+      "Decreased sensitivity to peer influence",
+      "Increased emotional fluctuations",
+      "Decline in identity exploration"
+    ],
+    "correctAnswer": "Increased emotional fluctuations"
+  },
+  {
+    "id": "w1q3",
+    "week": 1,
+    "question": "Why is identity formation significant during adolescence?",
+    "options": [
+      "It helps adolescents avoid peer interactions",
+      "It promotes dependency on parental opinions",
+      "It shapes their sense of self and direction in life",
+      "It increases academic pressure"
+    ],
+    "correctAnswer": "It shapes their sense of self and direction in life"
+  },
+  {
+    "id": "w1q4",
+    "week": 1,
+    "question": "Which of the following is an example of emotional intelligence?",
+    "options": [
+      "Ignoring other people’s feelings",
+      "Understanding and managing one’s own emotions",
+      "Memorizing emotional words",
+      "Always agreeing with friends"
+    ],
+    "correctAnswer": "Understanding and managing one’s own emotions"
+  },
+  {
+    "id": "w1q5",
+    "week": 1,
+    "question": "Why are support networks important in times of crisis?",
+    "options": [
+      "They isolate individuals from emotional impact",
+      "They help with financial planning only",
+      "They provide emotional and psychological safety",
+      "They reduce the need for communication"
+    ],
+    "correctAnswer": "They provide emotional and psychological safety"
+  },
+  {
+    "id": "w1q6",
+    "week": 1,
+    "question": "What role do mentors and guidance play in adolescent well-being?",
+    "options": [
+      "Discourage independence",
+      "Promote critical thinking and offer life advice",
+      "Enforce academic pressure",
+      "Limit emotional growth"
+    ],
+    "correctAnswer": "Promote critical thinking and offer life advice"
+  },
+  {
+    "id": "w1q7",
+    "week": 1,
+    "question": "Which of the following is a practical stress management technique?",
+    "options": [
+      "Overthinking",
+      "Avoiding problems",
+      "Mindfulness and relaxation",
+      "Ignoring support systems"
+    ],
+    "correctAnswer": "Mindfulness and relaxation"
+  },
+  {
+    "id": "w1q8",
+    "week": 1,
+    "question": "According to Erikson, what is the central conflict during adolescence?",
+    "options": [
+      "Trust vs. Mistrust",
+      "Initiative vs. Guilt",
+      "Identity vs. Role Confusion",
+      "Autonomy vs. Shame and Doubt"
+    ],
+    "correctAnswer": "Identity vs. Role Confusion"
+  },
+  {
+    "id": "w1q9",
+    "week": 1,
+    "question": "According to Kristin Neff, which of the following is not one of the three core components of self-compassion?",
+    "options": [
+      "Self-criticism",
+      "Common humanity",
+      "Mindfulness",
+      "Self-kindness"
+    ],
+    "correctAnswer": "Self-criticism"
+  },
+  {
+    "id": "w1q10",
+    "week": 1,
+    "question": "What are the two main types of social comparison identified in Festinger’s Social Comparison Theory?",
+    "options": [
+      "Objective and Subjective Comparison",
+      "Internal and External Comparison",
+      "Upward and Downward Comparison",
+      "Realistic and Unrealistic Comparison"
+    ],
+    "correctAnswer": "Upward and Downward Comparison"
+  },
+  {
+    "id": "w2q1",
+    "week": 2,
+    "question": "What is an example of a healthy coping mechanism?",
+    "options": [
+      "Ignoring the problem",
+      "Talking to a trusted friend",
+      "Overeating due to stress",
+      "Bottling up emotions"
+    ],
+    "correctAnswer": "Talking to a trusted friend"
+  },
+  {
+    "id": "w2q2",
+    "week": 2,
+    "question": "Emotional regulation involves:",
+    "options": [
+      "Suppressing emotions completely",
+      "Avoiding emotional situations",
+      "Understanding and managing emotions",
+      "Ignoring how others feel"
+    ],
+    "correctAnswer": "Understanding and managing emotions"
+  },
+  {
+    "id": "w2q3",
+    "week": 2,
+    "question": "Peer pressure is best described as:",
+    "options": [
+      "Advice from a counselor",
+      "Influence from friends or peers",
+      "Support from teachers",
+      "Family rules"
+    ],
+    "correctAnswer": "Influence from friends or peers"
+  },
+  {
+    "id": "w2q4",
+    "week": 2,
+    "question": "Assertiveness means:",
+    "options": [
+      "Always agreeing with others",
+      "Avoiding confrontation",
+      "Expressing your thoughts respectfully",
+      "Ignoring your needs"
+    ],
+    "correctAnswer": "Expressing your thoughts respectfully"
+  },
+  {
+    "id": "w2q5",
+    "week": 2,
+    "question": "Which of these most influences body image in teens?",
+    "options": [
+      "Weather",
+      "Media and social expectations",
+      "School subjects",
+      "Transportation choices"
+    ],
+    "correctAnswer": "Media and social expectations"
+  },
+  {
+    "id": "w2q6",
+    "week": 2,
+    "question": "Body positivity means:",
+    "options": [
+      "Criticizing others’ appearance",
+      "Believing one body type is superior",
+      "Accepting and respecting all body types",
+      "Ignoring health"
+    ],
+    "correctAnswer": "Accepting and respecting all body types"
+  },
+  {
+    "id": "w2q7",
+    "week": 2,
+    "question": "Mindfulness is the practice of:",
+    "options": [
+      "Thinking only about the past",
+      "Worrying about the future",
+      "Focusing on the present moment",
+      "Avoiding thoughts"
+    ],
+    "correctAnswer": "Focusing on the present moment"
+  },
+  {
+    "id": "w2q8",
+    "week": 2,
+    "question": "Which of the following best demonstrates active listening?",
+    "options": [
+      "Interrupting the speaker to give your opinion",
+      "Nodding occasionally and asking clarifying questions",
+      "Looking away while the speaker is talking",
+      "None of the above"
+    ],
+    "correctAnswer": "Nodding occasionally and asking clarifying questions"
+  },
+  {
+    "id": "w2q9",
+    "week": 2,
+    "question": "Which one is an unhealthy way to deal with stress?",
+    "options": [
+      "Talking to a friend",
+      "Going for a walk",
+      "Crying a little and then relaxing",
+      "Hitting things when you’re angry"
+    ],
+    "correctAnswer": "Hitting things when you’re angry"
+  },
+  {
+    "id": "w2q10",
+    "week": 2,
+    "question": "Self-harm (like cutting) is considered an unhealthy coping mechanism because:",
+    "options": [
+      "It solves the root of the problem",
+      "It helps improve long-term emotional health",
+      "It provides safe emotional expression",
+      "It may provide short-term relief but increases harm and emotional pain in the long run"
+    ],
+    "correctAnswer": "It may provide short-term relief but increases harm and emotional pain in the long run"
+  }
+]
