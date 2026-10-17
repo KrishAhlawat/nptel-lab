@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { Send, Shuffle, AlignJustify } from "lucide-react";
-import questionsData from "@/data/nptel_lab_questions.json";
+import { useState, useCallback, useEffect, type ReactNode } from "react";
+import questionsData from "@/data/mentalHealthAndWellbeing.json";
 import type { Question } from "@/types";
-import Timer from "@/components/Timer";
 import ResultsView from "@/components/ResultsView";
 import WeekSelector from "@/components/WeekSelector";
+import QuizRunner from "@/components/QuizRunner";
+import ActionBar from "@/components/ActionBar";
+import PageHeader from "@/components/PageHeader";
+import { recordQuiz, saveDraft, loadDraft, clearDraft, type Draft } from "@/store/progress";
 
 const allQuestions: Question[] = questionsData as Question[];
 
@@ -19,12 +21,86 @@ function shuffleArray<T>(arr: T[]): T[] {
   return a;
 }
 
-// A question with its options potentially shuffled for display
 interface DisplayQuestion extends Question {
   displayOptions: string[];
 }
 
 type Phase = "setup" | "quiz" | "results";
+
+/* ---------- small setup controls ---------- */
+function Field({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className="grid gap-3 py-5 sm:grid-cols-[8rem_1fr] sm:items-center">
+      <p className="text-sm text-[#a1a1aa]">{label}</p>
+      <div>{children}</div>
+    </div>
+  );
+}
+
+function Segmented<T extends string>({
+  value,
+  options,
+  onChange,
+}: {
+  value: T;
+  options: { value: T; label: string }[];
+  onChange: (v: T) => void;
+}) {
+  return (
+    <div role="group" className="inline-flex rounded-lg border border-[#1f1f1f] p-0.5">
+      {options.map((o) => (
+        <button
+          key={o.value}
+          aria-pressed={value === o.value}
+          onClick={() => onChange(o.value)}
+          className={`h-10 rounded-md px-4 text-sm transition-colors sm:h-9 ${
+            value === o.value ? "bg-white/[0.07] text-white" : "text-[#71717a] hover:text-white"
+          }`}
+        >
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function SwitchRow({
+  label,
+  hint,
+  on,
+  onChange,
+}: {
+  label: string;
+  hint: string;
+  on: boolean;
+  onChange: (v: boolean) => void;
+}) {
+  return (
+    <button
+      role="switch"
+      aria-checked={on}
+      onClick={() => onChange(!on)}
+      className="flex w-full items-center justify-between gap-4 py-4 text-left"
+    >
+      <span>
+        <span className="block text-[15px] text-white">{label}</span>
+        <span className="block text-sm text-[#71717a]">{hint}</span>
+      </span>
+      <span className={`relative h-6 w-10 shrink-0 rounded-full transition-colors ${on ? "bg-[#22c55e]" : "bg-[#27272a]"}`}>
+        <span
+          className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${on ? "translate-x-4" : ""}`}
+        />
+      </span>
+    </button>
+  );
+}
+
+const chip = (on: boolean) =>
+  `h-10 rounded-md border px-3.5 text-sm transition-colors sm:h-9 ${
+    on
+      ? "border-[#22c55e]/50 bg-[#22c55e]/10 text-[#22c55e]"
+      : "border-[#1f1f1f] text-[#a1a1aa] hover:border-[#3f3f46] hover:text-white"
+  }`;
 
 export default function QuizPage() {
   const [phase, setPhase] = useState<Phase>("setup");
@@ -36,9 +112,31 @@ export default function QuizPage() {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [elapsed, setElapsed] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const [fullCount, setFullCount] = useState<number | "all">("all");
+  const [draft, setDraft] = useState<Draft | null>(null);
+
+  // load any unfinished quiz once on mount
+  useEffect(() => {
+    setDraft(loadDraft());
+  }, []);
+
+  // autosave the in-progress quiz whenever an answer changes
+  useEffect(() => {
+    if (phase !== "quiz") return;
+    saveDraft({
+      quizMode,
+      pickWeek,
+      items: quizQuestions.map((q) => ({ id: q.id, displayOptions: q.displayOptions })),
+      answers: selectedAnswers,
+      elapsed,
+      savedAt: Date.now(),
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, selectedAnswers]);
 
   const startQuiz = () => {
     let base = quizMode === "full" ? allQuestions : allQuestions.filter((q) => q.week === pickWeek);
+    if (quizMode === "full" && fullCount !== "all") base = shuffleArray(base).slice(0, fullCount);
     if (randomizeQuestions) base = shuffleArray(base);
     const qs: DisplayQuestion[] = base.map((q) => ({
       ...q,
@@ -52,12 +150,46 @@ export default function QuizPage() {
     window.scrollTo({ top: 0 });
   };
 
+  const resumeQuiz = () => {
+    if (!draft) return;
+    const byId = new Map(allQuestions.map((q) => [q.id, q]));
+    const qs = draft.items
+      .map((it) => (byId.has(it.id) ? { ...byId.get(it.id)!, displayOptions: it.displayOptions } : null))
+      .filter(Boolean) as DisplayQuestion[];
+    if (qs.length === 0) {
+      clearDraft();
+      setDraft(null);
+      return;
+    }
+    setQuizMode(draft.quizMode);
+    setPickWeek(draft.pickWeek);
+    setQuizQuestions(qs);
+    setSelectedAnswers(draft.answers);
+    setElapsed(draft.elapsed);
+    setIsTimerRunning(true);
+    setPhase("quiz");
+    window.scrollTo({ top: 0 });
+  };
+
+  const discardDraft = () => {
+    clearDraft();
+    setDraft(null);
+  };
+
   const handleTick = useCallback(() => setElapsed((t) => t + 1), []);
 
   const handleSubmit = () => {
+    recordQuiz(
+      { mode: quizMode, week: quizMode === "week" ? pickWeek : undefined, seconds: elapsed },
+      quizQuestions.map((q) => ({
+        key: `main:${q.id}`,
+        correct: selectedAnswers[q.id] === q.correctAnswer,
+      }))
+    );
+    clearDraft();
+    setDraft(null);
     setIsTimerRunning(false);
     setPhase("results");
-    // Scroll to top so score is immediately visible
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -70,162 +202,119 @@ export default function QuizPage() {
     window.scrollTo({ top: 0 });
   };
 
-  const answeredCount = Object.keys(selectedAnswers).length;
-  const total = quizQuestions.length;
-
-  // ── SETUP ──
-  if (phase === "setup") {
-    return (
-      <div className="max-w-xl mx-auto px-4 sm:px-6 py-10">
-        <div className="mb-8">
-          <h1 className="text-xl font-semibold text-white mb-1">Quiz</h1>
-          <p className="text-sm text-[#71717a]">Answer at your own pace. Timer tracks how long you take.</p>
-        </div>
-
-        {/* Mode toggle */}
-        <div className="flex rounded-xl border border-[#1f1f1f] overflow-hidden mb-6">
-          <button onClick={() => setQuizMode("week")}
-            className={`flex-1 py-2.5 text-sm font-medium transition-all ${quizMode === "week" ? "bg-[#22c55e]/8 text-[#22c55e]" : "text-[#71717a] hover:text-white"}`}>
-            Week Quiz
-          </button>
-          <button onClick={() => setQuizMode("full")}
-            className={`flex-1 py-2.5 text-sm font-medium border-l border-[#1f1f1f] transition-all ${quizMode === "full" ? "bg-white/5 text-white" : "text-[#71717a] hover:text-white"}`}>
-            Full Quiz (120 Qs)
-          </button>
-        </div>
-
-        {quizMode === "week" && (
-          <div className="mb-6">
-            <p className="text-xs text-[#71717a] mb-3">Select week · 10 questions</p>
-            <WeekSelector selectedWeek={pickWeek} onSelect={(w) => setPickWeek(w ?? 1)} allowAll={false} />
-          </div>
-        )}
-        {quizMode === "full" && (
-          <div className="mb-6 p-4 rounded-xl border border-[#1f1f1f]">
-            <p className="text-sm text-[#a1a1aa]">120 questions · All 12 weeks</p>
-          </div>
-        )}
-
-        {/* Quiz options */}
-        <div className="mb-6 space-y-2">
-          <p className="text-xs text-[#52525b] uppercase tracking-wider mb-3">Options</p>
-          <button
-            onClick={() => setRandomizeQuestions((v) => !v)}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all ${
-              randomizeQuestions
-                ? "border-[#22c55e]/30 bg-[#22c55e]/6 text-[#22c55e]"
-                : "border-[#1f1f1f] text-[#71717a] hover:border-[#3f3f46] hover:text-white"
-            }`}
-          >
-            <Shuffle className="w-4 h-4 shrink-0" />
-            <span className="flex-1 text-left">Randomize question order</span>
-            <span className={`text-xs px-2 py-0.5 rounded-md font-medium ${
-              randomizeQuestions ? "bg-[#22c55e]/15 text-[#22c55e]" : "bg-[#1f1f1f] text-[#52525b]"
-            }`}>
-              {randomizeQuestions ? "On" : "Off"}
-            </span>
-          </button>
-          <button
-            onClick={() => setShuffleAnswers((v) => !v)}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all ${
-              shuffleAnswers
-                ? "border-[#22c55e]/30 bg-[#22c55e]/6 text-[#22c55e]"
-                : "border-[#1f1f1f] text-[#71717a] hover:border-[#3f3f46] hover:text-white"
-            }`}
-          >
-            <AlignJustify className="w-4 h-4 shrink-0" />
-            <span className="flex-1 text-left">Shuffle answer choices</span>
-            <span className={`text-xs px-2 py-0.5 rounded-md font-medium ${
-              shuffleAnswers ? "bg-[#22c55e]/15 text-[#22c55e]" : "bg-[#1f1f1f] text-[#52525b]"
-            }`}>
-              {shuffleAnswers ? "On" : "Off"}
-            </span>
-          </button>
-        </div>
-
-        <button onClick={startQuiz}
-          className="w-full py-3 rounded-xl bg-[#22c55e] text-black font-semibold text-sm hover:bg-[#16a34a] transition-colors">
-          Start Quiz
-        </button>
-      </div>
-    );
-  }
-
-  // ── RESULTS ──
+  /* ---------- results ---------- */
   if (phase === "results") {
     return (
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
-        <ResultsView questions={quizQuestions} selectedAnswers={selectedAnswers} onRetry={handleReset}
-          title={quizMode === "full" ? "Full Quiz Results" : `Week ${pickWeek} Results`} elapsed={elapsed} />
+      <ResultsView
+        questions={quizQuestions}
+        selectedAnswers={selectedAnswers}
+        onRetry={handleReset}
+        title={quizMode === "full" ? "Full quiz results" : `Week ${pickWeek} results`}
+        elapsed={elapsed}
+      />
+    );
+  }
+
+  /* ---------- taking the quiz ---------- */
+  if (phase === "quiz") {
+    return (
+      <div className="mx-auto max-w-2xl px-4 sm:px-6">
+        <QuizRunner
+          questions={quizQuestions}
+          answers={selectedAnswers}
+          onAnswer={(id, opt) => setSelectedAnswers((prev) => ({ ...prev, [id]: opt }))}
+          elapsed={elapsed}
+          isRunning={isTimerRunning}
+          onTick={handleTick}
+          onSubmit={handleSubmit}
+        />
       </div>
     );
   }
 
-  // ── QUIZ (long scroll) ──
+  /* ---------- setup ---------- */
+  const weekCount = allQuestions.filter((q) => q.week === pickWeek).length;
+  const count =
+    quizMode === "week"
+      ? weekCount
+      : fullCount === "all"
+        ? allQuestions.length
+        : Math.min(fullCount, allQuestions.length);
+
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 pb-28">
-      {/* Sticky top bar: progress + timer */}
-      <div className="sticky top-14 z-40 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-[#1f1f1f] pb-3 mb-8 pt-3">
-        <div className="flex items-center justify-between mb-2">
-          <p className="text-xs text-[#71717a]">{answeredCount}/{total} answered</p>
-          <Timer elapsed={elapsed} isRunning={isTimerRunning} onTick={handleTick} />
-        </div>
-        <div className="h-px bg-[#1f1f1f] rounded-full overflow-hidden">
-          <div className="h-full bg-[#22c55e] rounded-full transition-all duration-300"
-            style={{ width: `${total > 0 ? (answeredCount / total) * 100 : 0}%` }} />
-        </div>
-      </div>
+    <div className="mx-auto max-w-2xl px-4 pt-12 sm:px-6 sm:pt-16">
+      <PageHeader title="Quiz">Timed and scored. Questions you miss are saved for Review.</PageHeader>
 
-      {/* Questions */}
-      <div className="space-y-4">
-        {quizQuestions.map((question, i) => {
-          const selected = selectedAnswers[question.id];
-          return (
-            <div key={question.id} className="border border-[#1f1f1f] rounded-xl p-5">
-              <div className="flex gap-3 mb-4">
-                <span className="shrink-0 text-xs font-semibold text-[#71717a] w-6 pt-0.5">{i + 1}.</span>
-                <p className="text-white text-sm leading-relaxed">{question.question}</p>
-              </div>
-              <div className="space-y-2 pl-9">
-                {question.displayOptions.map((option, oi) => {
-                  const isSelected = option === selected;
-                  return (
-                    <button key={oi}
-                      onClick={() => setSelectedAnswers((prev) => ({ ...prev, [question.id]: option }))}
-                      className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg border text-xs text-left transition-all cursor-pointer ${
-                        isSelected
-                          ? "border-[#22c55e]/40 bg-[#22c55e]/8 text-[#22c55e]"
-                          : "border-[#1f1f1f] text-[#a1a1aa] hover:border-[#3f3f46] hover:text-white"
-                      }`}>
-                      <span className="shrink-0 w-4 h-4 rounded flex items-center justify-center text-[10px] font-bold text-[#3f3f46]">
-                        {["A","B","C","D"][oi]}
-                      </span>
-                      <span>{option}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Fixed bottom submit bar — always visible */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-[#1f1f1f]">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-          <div>
-            <p className="text-xs text-[#71717a]">{answeredCount} of {total} answered</p>
-            {answeredCount < total && (
-              <p className="text-[11px] text-[#3f3f46]">{total - answeredCount} remaining</p>
-            )}
+      {draft && (
+        <div className="mt-8 rounded-lg border border-[#22c55e]/30 bg-[#22c55e]/[0.04] p-4">
+          <p className="text-[15px] text-white">You have an unfinished quiz.</p>
+          <p className="mt-0.5 text-sm text-[#71717a]">
+            {Object.keys(draft.answers).length} of {draft.items.length} answered.
+          </p>
+          <div className="mt-4 flex gap-2">
+            <button
+              onClick={resumeQuiz}
+              className="h-10 rounded-lg bg-[#22c55e] px-4 text-sm font-semibold text-black transition-colors hover:bg-[#16a34a]"
+            >
+              Resume
+            </button>
+            <button
+              onClick={discardDraft}
+              className="h-10 rounded-lg border border-[#27272a] px-4 text-sm text-[#a1a1aa] transition-colors hover:text-white"
+            >
+              Discard
+            </button>
           </div>
-          <button onClick={handleSubmit}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#22c55e] text-black font-semibold text-sm hover:bg-[#16a34a] transition-colors shrink-0">
-            <Send className="w-3.5 h-3.5" />
-            Submit Quiz
-          </button>
         </div>
+      )}
+
+      <div className="mt-8 divide-y divide-[#1f1f1f] border-y border-[#1f1f1f]">
+        <Field label="Type">
+          <Segmented
+            value={quizMode}
+            onChange={setQuizMode}
+            options={[
+              { value: "week", label: "One week" },
+              { value: "full", label: "Full course" },
+            ]}
+          />
+        </Field>
+
+        {quizMode === "week" ? (
+          <Field label="Week">
+            <WeekSelector selectedWeek={pickWeek} onSelect={(w) => setPickWeek(w ?? 1)} allowAll={false} />
+          </Field>
+        ) : (
+          <Field label="Questions">
+            <div className="flex flex-wrap gap-1.5">
+              {([10, 25, 50, "all"] as const).map((n) => (
+                <button key={n} aria-pressed={fullCount === n} onClick={() => setFullCount(n)} className={chip(fullCount === n)}>
+                  {n === "all" ? `All ${allQuestions.length}` : n}
+                </button>
+              ))}
+            </div>
+          </Field>
+        )}
+
+        <SwitchRow
+          label="Randomize question order"
+          hint="Mix the questions instead of going in course order."
+          on={randomizeQuestions}
+          onChange={setRandomizeQuestions}
+        />
+        <SwitchRow
+          label="Shuffle answer choices"
+          hint="Stops you memorizing option positions."
+          on={shuffleAnswers}
+          onChange={setShuffleAnswers}
+        />
       </div>
+
+      <ActionBar
+        info={`${quizMode === "week" ? `Week ${pickWeek}` : "Full course"}, ${count} questions`}
+        action="Start quiz"
+        onAction={startQuiz}
+      />
     </div>
   );
 }

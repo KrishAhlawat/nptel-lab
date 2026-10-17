@@ -17,6 +17,7 @@ import type { Question } from "@/types";
 import Timer from "@/components/Timer";
 import ResultsView from "@/components/ResultsView";
 import QuestionCard from "@/components/QuestionCard";
+import { recordQuiz } from "@/store/progress";
 
 const allPYQs: Question[] = pyqData as Question[];
 
@@ -212,6 +213,10 @@ function QuizMode({ onBack }: { onBack: () => void }) {
   const handleTick = useCallback(() => setElapsed((t) => t + 1), []);
 
   const handleSubmit = () => {
+    recordQuiz(
+  { mode: "pyq", seconds: elapsed },
+  quizQuestions.map((q) => ({ key: `pyq:${q.id}`, correct: selectedAnswers[q.id] === q.correctAnswer }))
+);
     setIsTimerRunning(false);
     setPhase("results");
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -275,7 +280,7 @@ function QuizMode({ onBack }: { onBack: () => void }) {
               : "120 PYQs · All 12 weeks"}
           </p>
           <p className="text-xs text-[#52525b] mt-1">
-            Previous Year Questions from NPTEL ESD
+            Previous Year Questions from NPTEL
           </p>
         </div>
 
@@ -457,7 +462,7 @@ export default function PYQsPage() {
         </div>
         <h1 className="text-xl font-semibold text-white mb-2">PYQs</h1>
         <p className="text-sm text-[#71717a]">
-          120 exam questions across 12 weeks — sourced from NPTEL ESD past papers.
+          120 exam questions across 12 weeks — sourced from NPTEL past papers.
         </p>
         <div className="flex items-center gap-4 mt-3 text-xs text-[#52525b]">
           <span>12 weeks</span>

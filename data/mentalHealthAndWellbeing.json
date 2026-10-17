@@ -1,0 +1,1430 @@
+[
+  {
+    "id": "w1q1",
+    "week": 1,
+    "question": "Which factor best contributes to overall mental wellbeing?",
+    "options": [
+      "Ability to cope with life challenges",
+      "Constant happiness",
+      "Avoiding all stress",
+      "Ignoring emotions"
+    ],
+    "correctAnswer": "Ability to cope with life challenges"
+  },
+  {
+    "id": "w1q2",
+    "week": 1,
+    "question": "Which of the following is the correct sequence of stages in the General Adaptation Syndrome?",
+    "options": [
+      "Resistance → Alarm → Exhaustion",
+      "Alarm → Exhaustion → Resistance",
+      "Alarm → Resistance → Exhaustion",
+      "Exhaustion → Alarm → Resistance"
+    ],
+    "correctAnswer": "Alarm → Resistance → Exhaustion"
+  },
+  {
+    "id": "w1q3",
+    "week": 1,
+    "question": "Which behaviour reflects healthy coping?",
+    "options": [
+      "Suppressing feelings",
+      "Avoiding problems",
+      "Engaging in hobbies",
+      "Overthinking situations"
+    ],
+    "correctAnswer": "Engaging in hobbies"
+  },
+  {
+    "id": "w1q4",
+    "week": 1,
+    "question": "What is a key characteristic of digital overload?",
+    "options": [
+      "Mental exhaustion from excessive information",
+      "Improved focus",
+      "Reduced device usage",
+      "Increased relaxation"
+    ],
+    "correctAnswer": "Mental exhaustion from excessive information"
+  },
+  {
+    "id": "w1q5",
+    "week": 1,
+    "question": "Meher compares herself to influencers and feels inferior. Which theory explains this?",
+    "options": [
+      "Operant conditioning",
+      "Cognitive dissonance",
+      "Social comparison theory",
+      "Behavioral theory"
+    ],
+    "correctAnswer": "Social comparison theory"
+  },
+  {
+    "id": "w1q6",
+    "week": 1,
+    "question": "Which of the following is an example of unhealthy social media behavior?",
+    "options": [
+      "Learning new skills",
+      "Connecting with friends",
+      "Watching informative content",
+      "Comparing oneself constantly with others"
+    ],
+    "correctAnswer": "Comparing oneself constantly with others"
+  },
+  {
+    "id": "w1q7",
+    "week": 1,
+    "question": "What is the main purpose of relaxation techniques?",
+    "options": [
+      "Increase stress levels",
+      "Improve memory only",
+      "Reduce physiological and mental tension",
+      "Avoid responsibilities"
+    ],
+    "correctAnswer": "Reduce physiological and mental tension"
+  },
+  {
+    "id": "w1q8",
+    "week": 1,
+    "question": "Which practice helps in improving self-awareness?",
+    "options": [
+      "Mindful observation of thoughts",
+      "Ignoring emotions",
+      "Multitasking",
+      "Social withdrawal"
+    ],
+    "correctAnswer": "Mindful observation of thoughts"
+  },
+  {
+    "id": "w1q9",
+    "week": 1,
+    "question": "According to Piaget's theory, what is the \"imaginary audience\"?",
+    "options": [
+      "A group of friends who provide feedback on behavior",
+      "The belief that others are constantly watching, noticing, and evaluating oneself",
+      "The tendency to imitate people seen in the media",
+      "The ability to understand another person's perspective"
+    ],
+    "correctAnswer": "The belief that others are constantly watching, noticing, and evaluating oneself"
+  },
+  {
+    "id": "w2q1",
+    "week": 2,
+    "question": "Peer pressure can best be described as:",
+    "options": [
+      "Self-motivation",
+      "Family expectations",
+      "Personal decision-making",
+      "Influence from peers to act in certain ways"
+    ],
+    "correctAnswer": "Influence from peers to act in certain ways"
+  },
+  {
+    "id": "w2q2",
+    "week": 2,
+    "question": "Assertiveness helps individuals to:",
+    "options": [
+      "Please everyone",
+      "Express thoughts respectfully",
+      "Avoid communication",
+      "Dominate others"
+    ],
+    "correctAnswer": "Express thoughts respectfully"
+  },
+  {
+    "id": "w2q3",
+    "week": 2,
+    "question": "Which factor strongly affects body image in adolescents?",
+    "options": [
+      "Media influence",
+      "Weather",
+      "Food habits only",
+      "Sleep cycle"
+    ],
+    "correctAnswer": "Media influence"
+  },
+  {
+    "id": "w2q4",
+    "week": 2,
+    "question": "What is the purpose of mindfulness?",
+    "options": [
+      "Focus on past mistakes",
+      "Worry about future",
+      "Stay present in the moment",
+      "Avoid emotions"
+    ],
+    "correctAnswer": "Stay present in the moment"
+  },
+  {
+    "id": "w2q5",
+    "week": 2,
+    "question": "Which is a relaxation technique?",
+    "options": [
+      "Meditation",
+      "Overthinking",
+      "Isolation",
+      "Procrastination"
+    ],
+    "correctAnswer": "Meditation"
+  },
+  {
+    "id": "w2q6",
+    "week": 2,
+    "question": "Emotional regulation refers to:",
+    "options": [
+      "Suppressing all emotions",
+      "Ignoring feelings",
+      "Expressing anger freely",
+      "Managing emotions effectively"
+    ],
+    "correctAnswer": "Managing emotions effectively"
+  },
+  {
+    "id": "w2q7",
+    "week": 2,
+    "question": "A student’s peers encourage her to join a study group and maintain a healthier routine. Although she initially feels hesitant, the decision aligns with her personal goals and helps her develop better habits. Which aspect most strongly indicates that this is positive peer pressure?",
+    "options": [
+      "She agrees because she does not want to be excluded from the group.",
+      "She feels nervous before making the decision.",
+      "The influence aligns with her values and contributes to personal growth.",
+      "She changes her behaviour primarily to gain approval from her peers."
+    ],
+    "correctAnswer": "The influence aligns with her values and contributes to personal growth."
+  },
+  {
+    "id": "w2q8",
+    "week": 2,
+    "question": "Active listening involves:",
+    "options": [
+      "Interrupting others",
+      "Judging quickly",
+      "Paying full attention",
+      "Ignoring body language"
+    ],
+    "correctAnswer": "Paying full attention"
+  },
+  {
+    "id": "w2q9",
+    "week": 2,
+    "question": "Building self-esteem means:",
+    "options": [
+      "Comparing with others",
+      "Accepting oneself",
+      "Seeking validation only",
+      "Avoiding challenges"
+    ],
+    "correctAnswer": "Accepting oneself"
+  },
+  {
+    "id": "w2q10",
+    "week": 2,
+    "question": "Why can body image concerns feel more intense during adolescence?",
+    "options": [
+      "Adolescents experience very few emotional changes.",
+      "Heightened emotional volatility can amplify concerns about appearance and self-worth.",
+      "Adolescents do not care about their appearance.",
+      "Mood swings reduce concerns about self-worth."
+    ],
+    "correctAnswer": "Heightened emotional volatility can amplify concerns about appearance and self-worth."
+  },
+  {
+    "id": "w3q1",
+    "week": 3,
+    "question": "When faced with two assignments due on the same day, the best first step is to:",
+    "options": [
+      "Ignore both assignments",
+      "Complete the easier one without planning",
+      "Prioritize tasks based on deadlines and importance",
+      "Wait until the last minute to decide"
+    ],
+    "correctAnswer": "Prioritize tasks based on deadlines and importance"
+  },
+  {
+    "id": "w3q2",
+    "week": 3,
+    "question": "Which is an example of unhealthy coping?",
+    "options": [
+      "Talking to a friend",
+      "Exercise",
+      "Journaling",
+      "Excessive social media"
+    ],
+    "correctAnswer": "Excessive social media"
+  },
+  {
+    "id": "w3q3",
+    "week": 3,
+    "question": "Which of the following reflects effective emotional regulation?",
+    "options": [
+      "Ignoring feelings completely",
+      "Recognizing emotions and choosing a response",
+      "Reacting immediately without thinking",
+      "Blaming others for emotional distress"
+    ],
+    "correctAnswer": "Recognizing emotions and choosing a response"
+  },
+  {
+    "id": "w3q4",
+    "week": 3,
+    "question": "A friend is upset, and you respond by saying, \"It sounds like you're feeling disappointed because your project didn't go as planned.\" This demonstrates:",
+    "options": [
+      "Criticism",
+      "Active listening",
+      "Giving unwanted advice",
+      "Changing the subject"
+    ],
+    "correctAnswer": "Active listening"
+  },
+  {
+    "id": "w3q5",
+    "week": 3,
+    "question": "A student breaks a large assignment into smaller tasks with deadlines. This is an example of:",
+    "options": [
+      "Goal setting and time management",
+      "Avoidance",
+      "Emotional suppression",
+      "Conflict awareness"
+    ],
+    "correctAnswer": "Goal setting and time management"
+  },
+  {
+    "id": "w3q6",
+    "week": 3,
+    "question": "Regular physical activity contributes to mental well-being by?",
+    "options": [
+      "Increasing stress hormones",
+      "Reducing endorphin levels",
+      "Causing emotional instability",
+      "Enhancing mood through neurochemical changes"
+    ],
+    "correctAnswer": "Enhancing mood through neurochemical changes"
+  },
+  {
+    "id": "w3q7",
+    "week": 3,
+    "question": "A person who understands others’ feelings during conflict shows",
+    "options": [
+      "Sympathy only",
+      "Indifference",
+      "Aggression",
+      "Empathy"
+    ],
+    "correctAnswer": "Empathy"
+  },
+  {
+    "id": "w3q8",
+    "week": 3,
+    "question": "A student fails an exam but plans a new study strategy instead of giving up. This best demonstrates:",
+    "options": [
+      "Avoidance coping",
+      "Emotional suppression",
+      "Resilience",
+      "Denial"
+    ],
+    "correctAnswer": "Resilience"
+  },
+  {
+    "id": "w3q9",
+    "week": 3,
+    "question": "A student disagrees with a classmate but speaks calmly, listens carefully, and looks for a solution that benefits both. This is an example of:",
+    "options": [
+      "Conflict resolution",
+      "Aggressive communication",
+      "Emotional avoidance",
+      "Passive behaviour"
+    ],
+    "correctAnswer": "Conflict resolution"
+  },
+  {
+    "id": "w3q10",
+    "week": 3,
+    "question": "Which is NOT a component of SMART goals?",
+    "options": [
+      "Specific",
+      "Measurable",
+      "Arbitrary",
+      "Time-bound"
+    ],
+    "correctAnswer": "Arbitrary"
+  },
+  {
+    "id": "w4q1",
+    "week": 4,
+    "question": "Which of the following is NOT a source of academic pressure?",
+    "options": [
+      "High expectations from parents",
+      "Time constraints",
+      "Balanced lifestyle",
+      "Fear of failure"
+    ],
+    "correctAnswer": "Balanced lifestyle"
+  },
+  {
+    "id": "w4q2",
+    "week": 4,
+    "question": "Difficulty in concentration and negative thinking are examples of:",
+    "options": [
+      "Behavioural symptoms",
+      "Emotional symptoms",
+      "Physical symptoms",
+      "Cognitive symptoms"
+    ],
+    "correctAnswer": "Cognitive symptoms"
+  },
+  {
+    "id": "w4q3",
+    "week": 4,
+    "question": "Emotional intelligence refers to the ability to:",
+    "options": [
+      "Solve mathematical problems",
+      "Understand and manage emotions",
+      "Manage time effectively",
+      "Memorize information"
+    ],
+    "correctAnswer": "Understand and manage emotions"
+  },
+  {
+    "id": "w4q4",
+    "week": 4,
+    "question": "Career Decision Scale (CDS) is used to measure:",
+    "options": [
+      "Intelligence",
+      "Career indecision",
+      "Emotional intelligence",
+      "Personality traits"
+    ],
+    "correctAnswer": "Career indecision"
+  },
+  {
+    "id": "w4q5",
+    "week": 4,
+    "question": "Which of the following is an ethical responsibility of a therapist?",
+    "options": [
+      "Making all decisions on behalf of the client",
+      "Guaranteeing that therapy will always be successful",
+      "Maintaining confidentiality and obtaining informed consent",
+      "Sharing client information with friends for advice"
+    ],
+    "correctAnswer": "Maintaining confidentiality and obtaining informed consent"
+  },
+  {
+    "id": "w4q6",
+    "week": 4,
+    "question": "Which activity is most helpful for relaxing the mind?",
+    "options": [
+      "Continuous worrying",
+      "Meditation",
+      "Skipping meals",
+      "Excessive screen time"
+    ],
+    "correctAnswer": "Meditation"
+  },
+  {
+    "id": "w4q7",
+    "week": 4,
+    "question": "A person should seek help when:",
+    "options": [
+      "Everything is going well",
+      "Problems disturb daily routine",
+      "Only during holidays",
+      "Never"
+    ],
+    "correctAnswer": "Problems disturb daily routine"
+  },
+  {
+    "id": "w4q8",
+    "week": 4,
+    "question": "Which habit improves time management?",
+    "options": [
+      "Planning tasks",
+      "Ignoring deadlines",
+      "Studying randomly",
+      "Sleeping less"
+    ],
+    "correctAnswer": "Planning tasks"
+  },
+  {
+    "id": "w4q9",
+    "week": 4,
+    "question": "Social responsibility includes:",
+    "options": [
+      "Helping others",
+      "Ignoring society",
+      "Competing always",
+      "Focusing only on self"
+    ],
+    "correctAnswer": "Helping others"
+  },
+  {
+    "id": "w4q10",
+    "week": 4,
+    "question": "What is the primary distinction between counselling and psychotherapy?",
+    "options": [
+      "Counselling focuses only on mental illness, while psychotherapy focuses on education",
+      "Counselling is generally shorter-term and addresses specific or everyday concerns, while psychotherapy may be longer-term and addresses deeper mental health concerns",
+      "Counselling is provided only by psychiatrists, while psychotherapy is provided only by counsellors",
+      "There is no difference between counselling and psychotherapy"
+    ],
+    "correctAnswer": "Counselling is generally shorter-term and addresses specific or everyday concerns, while psychotherapy may be longer-term and addresses deeper mental health concerns"
+  },
+  {
+    "id": "w5q1",
+    "week": 5,
+    "question": "What is emotional validation?",
+    "options": [
+      "Ignoring emotions to stay strong",
+      "Accepting and acknowledging one’s own or others’ emotions",
+      "Controlling emotions completely",
+      "Avoiding emotional discussions"
+    ],
+    "correctAnswer": "Accepting and acknowledging one’s own or others’ emotions"
+  },
+  {
+    "id": "w5q2",
+    "week": 5,
+    "question": "What is the main purpose of emotional ventilation?",
+    "options": [
+      "Suppressing emotions",
+      "Expressing emotions in a healthy way",
+      "Avoiding emotional experiences",
+      "Criticizing others’ feelings"
+    ],
+    "correctAnswer": "Expressing emotions in a healthy way"
+  },
+  {
+    "id": "w5q3",
+    "week": 5,
+    "question": "Which skill is essential for emotional validation?",
+    "options": [
+      "Judgment",
+      "Active listening",
+      "Avoidance",
+      "Silence"
+    ],
+    "correctAnswer": "Active listening"
+  },
+  {
+    "id": "w5q4",
+    "week": 5,
+    "question": "Emotional suppression can lead to:",
+    "options": [
+      "Increased well-being",
+      "Better communication",
+      "Mental health issues",
+      "Emotional clarity"
+    ],
+    "correctAnswer": "Mental health issues"
+  },
+  {
+    "id": "w5q5",
+    "week": 5,
+    "question": "Which of the following is a type of boundary?",
+    "options": [
+      "Financial boundary",
+      "Emotional boundary",
+      "Academic boundary",
+      "Political boundary"
+    ],
+    "correctAnswer": "Emotional boundary"
+  },
+  {
+    "id": "w5q6",
+    "week": 5,
+    "question": "What is assertiveness in boundary setting?",
+    "options": [
+      "Being aggressive",
+      "Being passive",
+      "Expressing needs clearly and respectfully",
+      "Avoiding confrontation"
+    ],
+    "correctAnswer": "Expressing needs clearly and respectfully"
+  },
+  {
+    "id": "w5q7",
+    "week": 5,
+    "question": "What helps in managing emotional overwhelm?",
+    "options": [
+      "Ignoring stress",
+      "Mindfulness and grounding",
+      "Overworking",
+      "Isolation"
+    ],
+    "correctAnswer": "Mindfulness and grounding"
+  },
+  {
+    "id": "w5q8",
+    "week": 5,
+    "question": "Emotional triggers are:",
+    "options": [
+      "Random thoughts",
+      "Situations that provoke emotional reactions",
+      "Physical symptoms only",
+      "Irrelevant experiences"
+    ],
+    "correctAnswer": "Situations that provoke emotional reactions"
+  },
+  {
+    "id": "w5q9",
+    "week": 5,
+    "question": "Emotional resilience refers to:",
+    "options": [
+      "Avoiding emotions",
+      "Reacting impulsively",
+      "Ability to adapt and recover from stress",
+      "Ignoring problems"
+    ],
+    "correctAnswer": "Ability to adapt and recover from stress"
+  },
+  {
+    "id": "w5q10",
+    "week": 5,
+    "question": "Social support contributes to:",
+    "options": [
+      "Increased stress",
+      "Emotional resilience",
+      "Isolation",
+      "Conflict"
+    ],
+    "correctAnswer": "Emotional resilience"
+  },
+  {
+    "id": "w6q1",
+    "week": 6,
+    "question": "Journaling helps in:",
+    "options": [
+      "Stress increase",
+      "Confusion",
+      "Emotional clarity",
+      "Avoidance"
+    ],
+    "correctAnswer": "Emotional clarity"
+  },
+  {
+    "id": "w6q2",
+    "week": 6,
+    "question": "Gratitude journaling improves:",
+    "options": [
+      "Stress levels",
+      "Negative thinking",
+      "Fear",
+      "Positive mindset"
+    ],
+    "correctAnswer": "Positive mindset"
+  },
+  {
+    "id": "w6q3",
+    "week": 6,
+    "question": "Movement therapies include:",
+    "options": [
+      "Dancing and yoga",
+      "Sleeping",
+      "Watching TV",
+      "Studying"
+    ],
+    "correctAnswer": "Dancing and yoga"
+  },
+  {
+    "id": "w6q4",
+    "week": 6,
+    "question": "Storytelling helps in:",
+    "options": [
+      "Increasing anxiety",
+      "Ignoring problems",
+      "Self-exploration",
+      "Avoiding emotions"
+    ],
+    "correctAnswer": "Self-exploration"
+  },
+  {
+    "id": "w6q5",
+    "week": 6,
+    "question": "Which is a mindfulness technique?",
+    "options": [
+      "Overthinking",
+      "Avoiding study",
+      "Panic",
+      "Deep breathing"
+    ],
+    "correctAnswer": "Deep breathing"
+  },
+  {
+    "id": "w6q6",
+    "week": 6,
+    "question": "Exam anxiety can affect:",
+    "options": [
+      "Only physical health",
+      "Only mental health",
+      "Both mental and physical health",
+      "Neither"
+    ],
+    "correctAnswer": "Both mental and physical health"
+  },
+  {
+    "id": "w6q7",
+    "week": 6,
+    "question": "A study schedule helps in:",
+    "options": [
+      "Increasing stress",
+      "Avoiding exams",
+      "Managing time effectively",
+      "Confusion"
+    ],
+    "correctAnswer": "Managing time effectively"
+  },
+  {
+    "id": "w6q8",
+    "week": 6,
+    "question": "Positive self-talk helps to:",
+    "options": [
+      "Build confidence",
+      "Increase fear",
+      "Reduce memory",
+      "Create stress"
+    ],
+    "correctAnswer": "Build confidence"
+  },
+  {
+    "id": "w6q9",
+    "week": 6,
+    "question": "How do creative arts and therapies support emotional well-being?",
+    "options": [
+      "By allowing non-verbal communication and reducing stress",
+      "By suppressing emotions and causing confusion",
+      "By increasing fear and anxiety",
+      "By avoiding feelings and memory loss"
+    ],
+    "correctAnswer": "By allowing non-verbal communication and reducing stress"
+  },
+  {
+    "id": "w6q10",
+    "week": 6,
+    "question": "What strategies help in managing exam anxiety effectively?",
+    "options": [
+      "Stress related to exams managed through time planning",
+      "Skipping sleep and avoiding study",
+      "Happiness before exams and procrastination",
+      "Physical strength and ignoring preparation"
+    ],
+    "correctAnswer": "Stress related to exams managed through time planning"
+  },
+  {
+    "id": "w7q1",
+    "week": 7,
+    "question": "Relationship trauma may result from:",
+    "options": [
+      "Trust",
+      "Respect",
+      "Support",
+      "Betrayal or abuse"
+    ],
+    "correctAnswer": "Betrayal or abuse"
+  },
+  {
+    "id": "w7q2",
+    "week": 7,
+    "question": "Avoidant individuals in relationships tend to:",
+    "options": [
+      "Seek reassurance",
+      "Be overly expressive",
+      "Maintain emotional distance",
+      "Become dependent"
+    ],
+    "correctAnswer": "Maintain emotional distance"
+  },
+  {
+    "id": "w7q3",
+    "week": 7,
+    "question": "Which of the following is most important for maintaining a healthy work-life balance?",
+    "options": [
+      "Ignoring stress",
+      "Time management",
+      "Overworking",
+      "Avoiding responsibility"
+    ],
+    "correctAnswer": "Time management"
+  },
+  {
+    "id": "w7q4",
+    "week": 7,
+    "question": "Setting healthy personal boundaries primarily helps in:",
+    "options": [
+      "Increasing stress",
+      "Avoiding tasks",
+      "Reducing clarity",
+      "Preventing burnout"
+    ],
+    "correctAnswer": "Preventing burnout"
+  },
+  {
+    "id": "w7q5",
+    "week": 7,
+    "question": "Healthy friendships are best characterized by:",
+    "options": [
+      "Competition",
+      "Control",
+      "Mutual respect",
+      "Superiority"
+    ],
+    "correctAnswer": "Mutual respect"
+  },
+  {
+    "id": "w7q6",
+    "week": 7,
+    "question": "Communication in a secure attachment relationship is generally:",
+    "options": [
+      "Aggressive",
+      "Passive",
+      "Avoidant",
+      "Open and honest"
+    ],
+    "correctAnswer": "Open and honest"
+  },
+  {
+    "id": "w7q7",
+    "week": 7,
+    "question": "Conflict resolution in secure relationships typically involves:",
+    "options": [
+      "Blaming the other person",
+      "Remaining silent",
+      "Avoiding the issue",
+      "Mutual understanding and problem-solving"
+    ],
+    "correctAnswer": "Mutual understanding and problem-solving"
+  },
+  {
+    "id": "w7q8",
+    "week": 7,
+    "question": "Developing a secure attachment style requires:",
+    "options": [
+      "Avoiding emotional closeness",
+      "Emotional awareness and healthy expression",
+      "Ignoring personal needs",
+      "Fear of rejection"
+    ],
+    "correctAnswer": "Emotional awareness and healthy expression"
+  },
+  {
+    "id": "w7q9",
+    "week": 7,
+    "question": "According to attachment theory, which parenting pattern is most likely to contribute to the development of an anxious attachment style in children?",
+    "options": [
+      "Consistent warmth with predictable responsiveness",
+      "Emotionally distant and consistently rejecting caregiving",
+      "Inconsistent caregiving with unpredictable responsiveness to the child's needs",
+      "Encouraging age-appropriate independence while remaining emotionally available"
+    ],
+    "correctAnswer": "Inconsistent caregiving with unpredictable responsiveness to the child's needs"
+  },
+  {
+    "id": "w7q10",
+    "week": 7,
+    "question": "A person with a history of relationship trauma has worked through therapy and developed a secure attachment style. Which behaviour best reflects this change?",
+    "options": [
+      "Avoiding intimate relationships to prevent emotional pain",
+      "Depending entirely on a partner for emotional security and decision-making",
+      "Communicating needs openly, maintaining healthy boundaries, and tolerating emotional vulnerability without excessive fear",
+      "Suppressing emotions and focusing exclusively on work to avoid interpersonal closeness"
+    ],
+    "correctAnswer": "Communicating needs openly, maintaining healthy boundaries, and tolerating emotional vulnerability without excessive fear"
+  },
+  {
+    "id": "w8q1",
+    "week": 8,
+    "question": "What is the key difference between intrinsic and extrinsic motivation?",
+    "options": [
+      "Intrinsic motivation is driven by external rewards",
+      "Intrinsic motivation arises from internal satisfaction, while extrinsic comes from external rewards",
+      "Extrinsic motivation is self-generated",
+      "Both types involve competition"
+    ],
+    "correctAnswer": "Intrinsic motivation arises from internal satisfaction, while extrinsic comes from external rewards"
+  },
+  {
+    "id": "w8q2",
+    "week": 8,
+    "question": "During a mental health emergency, what should a professional focus on first?",
+    "options": [
+      "Gathering paperwork",
+      "Making assumptions",
+      "Ensuring safety and stabilizing the individual",
+      "Discussing past history"
+    ],
+    "correctAnswer": "Ensuring safety and stabilizing the individual"
+  },
+  {
+    "id": "w8q3",
+    "week": 8,
+    "question": "How does positive reinforcement influence motivation?",
+    "options": [
+      "It increases the likelihood of repeating desired behaviours by rewarding them",
+      "It provides punishment for poor performance",
+      "It discourages repetition of behaviours",
+      "It delays goal achievement"
+    ],
+    "correctAnswer": "It increases the likelihood of repeating desired behaviours by rewarding them"
+  },
+  {
+    "id": "w8q4",
+    "week": 8,
+    "question": "Why is aligning goals with personal values important for motivation?",
+    "options": [
+      "It helps reduce emotional attachment",
+      "It decreases goal clarity",
+      "It strengthens commitment and engagement",
+      "It prevents decision-making"
+    ],
+    "correctAnswer": "It strengthens commitment and engagement"
+  },
+  {
+    "id": "w8q5",
+    "week": 8,
+    "question": "Which skill is essential in Psychological First Aid?",
+    "options": [
+      "Debating the cause of the crisis",
+      "Active listening and empathic presence",
+      "Avoiding eye contact",
+      "Giving unsolicited advice"
+    ],
+    "correctAnswer": "Active listening and empathic presence"
+  },
+  {
+    "id": "w8q6",
+    "week": 8,
+    "question": "Which of the following is a warning sign of suicidal ideation in students?",
+    "options": [
+      "Improved academic performance",
+      "Talking about feeling hopeless or being a burden",
+      "Expressing excitement about future plans",
+      "Increased interest in group activities"
+    ],
+    "correctAnswer": "Talking about feeling hopeless or being a burden"
+  },
+  {
+    "id": "w8q7",
+    "week": 8,
+    "question": "What is a key strategy for approaching someone who may be thinking about suicide?",
+    "options": [
+      "Avoid asking direct questions",
+      "Use vague suggestions",
+      "Ignore signs unless they ask for help",
+      "Speak openly, with compassion and without judgment"
+    ],
+    "correctAnswer": "Speak openly, with compassion and without judgment"
+  },
+  {
+    "id": "w8q8",
+    "week": 8,
+    "question": "What defines resilience in the context of mental health?",
+    "options": [
+      "Avoiding emotional expression",
+      "The ability to adapt and recover from adversity",
+      "Suppressing difficult experiences",
+      "Always feeling happy regardless of circumstances"
+    ],
+    "correctAnswer": "The ability to adapt and recover from adversity"
+  },
+  {
+    "id": "w8q9",
+    "week": 8,
+    "question": "Which strategy helps cultivate resilience during a crisis?",
+    "options": [
+      "Ignoring emotions and focusing only on tasks",
+      "Denying the impact of stress",
+      "Practicing optimism and emotional awareness",
+      "Isolating oneself to prevent burdening others"
+    ],
+    "correctAnswer": "Practicing optimism and emotional awareness"
+  },
+  {
+    "id": "w8q10",
+    "week": 8,
+    "question": "What is an effective way to prevent burnout?",
+    "options": [
+      "Setting boundaries and prioritizing self-care",
+      "Ignoring personal needs",
+      "Taking on more responsibilities",
+      "Avoiding breaks to maintain productivity"
+    ],
+    "correctAnswer": "Setting boundaries and prioritizing self-care"
+  },
+  {
+    "id": "w9q1",
+    "week": 9,
+    "question": "What is one way to prepare well for a meeting with a supervisor?",
+    "options": [
+      "Arrive with no agenda or notes",
+      "Send your supervisor a brief agenda in advance",
+      "Wait for the supervisor to ask all questions",
+      "Only discuss problems you can solve yourself"
+    ],
+    "correctAnswer": "Send your supervisor a brief agenda in advance"
+  },
+  {
+    "id": "w9q2",
+    "week": 9,
+    "question": "Which practice supports trust in a mentor–student relationship?",
+    "options": [
+      "Sharing only partial information to avoid criticism",
+      "Asking for extensions right before every deadline",
+      "Promising effort without updating on progress",
+      "Meeting deadlines and being honest about delays"
+    ],
+    "correctAnswer": "Meeting deadlines and being honest about delays"
+  },
+  {
+    "id": "w9q3",
+    "week": 9,
+    "question": "Why is it important to ask clarifying questions of a supervisor?",
+    "options": [
+      "To make the meeting last longer",
+      "To confirm that you understand the task correctly",
+      "To show that you disagree with their instructions",
+      "To avoid asking for feedback later"
+    ],
+    "correctAnswer": "To confirm that you understand the task correctly"
+  },
+  {
+    "id": "w9q4",
+    "week": 9,
+    "question": "Which of the following best describes a respectful mentor–student dynamic?",
+    "options": [
+      "Both parties respect time, boundaries, and communication norms",
+      "The student avoids all emails and only speaks in class",
+      "The student ignores feedback but praises the mentor",
+      "The mentor makes all decisions without student input"
+    ],
+    "correctAnswer": "Both parties respect time, boundaries, and communication norms"
+  },
+  {
+    "id": "w9q5",
+    "week": 9,
+    "question": "What is most likely to weaken a supervisory relationship?",
+    "options": [
+      "Regular progress updates and openness about challenges",
+      "Being honest about not understanding part of the task",
+      "Repeatedly missing deadlines without explanation",
+      "Asking for help whenever you feel stuck"
+    ],
+    "correctAnswer": "Repeatedly missing deadlines without explanation"
+  },
+  {
+    "id": "w9q6",
+    "week": 9,
+    "question": "Which message style is most appropriate for official communication with a supervisor?",
+    "options": [
+      "Very casual, with emojis and slang",
+      "Written only in voice-note form",
+      "Extremely long and detailed for every small issue",
+      "Polite, clear, and professional in tone"
+    ],
+    "correctAnswer": "Polite, clear, and professional in tone"
+  },
+  {
+    "id": "w9q7",
+    "week": 9,
+    "question": "What is a sign of a healthy academic relationship with a mentor?",
+    "options": [
+      "The student hides struggles to appear perfect",
+      "Both parties respect each other’s time and boundaries",
+      "The mentor never checks on progress",
+      "The student rarely asks questions"
+    ],
+    "correctAnswer": "Both parties respect each other’s time and boundaries"
+  },
+  {
+    "id": "w9q8",
+    "week": 9,
+    "question": "Which of the following is helpful when you feel confused about your supervisor’s instructions?",
+    "options": [
+      "Ask for examples or clarification politely",
+      "Stay silent and hope you figure it out later",
+      "Immediately switch to a different mentor",
+      "Ignore the instructions and work in your own way"
+    ],
+    "correctAnswer": "Ask for examples or clarification politely"
+  },
+  {
+    "id": "w9q9",
+    "week": 9,
+    "question": "Why is it important to be honest about your workload with a supervisor?",
+    "options": [
+      "It guarantees you will get easier tasks",
+      "It helps them suggest realistic timelines and priorities",
+      "It shifts full responsibility for planning onto you",
+      "It proves that you are overqualified"
+    ],
+    "correctAnswer": "It helps them suggest realistic timelines and priorities"
+  },
+  {
+    "id": "w9q10",
+    "week": 9,
+    "question": "Which behavior shows respect for a mentor’s expertise?",
+    "options": [
+      "Repeatedly arguing without evidence",
+      "Ignoring their suggestions and doing your own thing",
+      "Listening carefully and considering their advice",
+      "Publicly criticizing them in front of peers"
+    ],
+    "correctAnswer": "Listening carefully and considering their advice"
+  },
+  {
+    "id": "w10q1",
+    "week": 10,
+    "question": "Which behaviour demonstrates emotional intelligence in conflict resolution?",
+    "options": [
+      "Listening actively and validating feelings",
+      "Ignoring the other person’s perspective",
+      "Responding with aggression immediately",
+      "Avoiding all communication"
+    ],
+    "correctAnswer": "Listening actively and validating feelings"
+  },
+  {
+    "id": "w10q2",
+    "week": 10,
+    "question": "When recovering from illness, which choice reflects balanced self-care?",
+    "options": [
+      "Ignoring medical advice",
+      "Refusing to adjust routines at all",
+      "Gradually resuming responsibilities with rest breaks",
+      "Overexerting to “catch up” quickly"
+    ],
+    "correctAnswer": "Gradually resuming responsibilities with rest breaks"
+  },
+  {
+    "id": "w10q3",
+    "week": 10,
+    "question": "Which element most influences identity exploration in adolescence?",
+    "options": [
+      "Physical appearance alone",
+      "Daily temperature changes",
+      "Random coincidences only",
+      "Experimenting with different roles and values"
+    ],
+    "correctAnswer": "Experimenting with different roles and values"
+  },
+  {
+    "id": "w10q4",
+    "week": 10,
+    "question": "What improves the quality of group decision-making?",
+    "options": [
+      "Considering diverse viewpoints before deciding",
+      "Acting on impulse without discussion",
+      "Copying the loudest voice in the room",
+      "Avoiding responsibility for choices"
+    ],
+    "correctAnswer": "Considering diverse viewpoints before deciding"
+  },
+  {
+    "id": "w10q5",
+    "week": 10,
+    "question": "Which preparation strategy reduces nervousness before public speaking?",
+    "options": [
+      "Avoiding rehearsal entirely",
+      "Practicing relaxation techniques like progressive muscle relaxation",
+      "Comparing negatively with experienced speakers",
+      "Pretending the event isn’t important"
+    ],
+    "correctAnswer": "Practicing relaxation techniques like progressive muscle relaxation"
+  },
+  {
+    "id": "w10q6",
+    "week": 10,
+    "question": "What strengthens resilience during long-term challenges?",
+    "options": [
+      "Avoiding effort all together",
+      "Giving up after minor setbacks",
+      "Seeking approval constantly",
+      "Building supportive relationships and coping strategies"
+    ],
+    "correctAnswer": "Building supportive relationships and coping strategies"
+  },
+  {
+    "id": "w10q7",
+    "week": 10,
+    "question": "What is a common outcome of unmanaged academic stress?",
+    "options": [
+      "Sleep enhancement",
+      "Improved emotional regulation",
+      "Decline in concentration and motivation",
+      "Unlimited productivity"
+    ],
+    "correctAnswer": "Decline in concentration and motivation"
+  },
+  {
+    "id": "w10q8",
+    "week": 10,
+    "question": "Which lifestyle habit promotes sustainable self-care?",
+    "options": [
+      "Establishing consistent sleep routines",
+      "Skipping meals to save time",
+      "Working without rest breaks",
+      "Neglecting hydration needs"
+    ],
+    "correctAnswer": "Establishing consistent sleep routines"
+  },
+  {
+    "id": "w10q9",
+    "week": 10,
+    "question": "How can individuals transform mistakes into growth opportunities?",
+    "options": [
+      "Blaming others exclusively",
+      "Ignoring all past errors",
+      "Journaling reflections and setting improvement goals",
+      "Rejecting feedback outright"
+    ],
+    "correctAnswer": "Journaling reflections and setting improvement goals"
+  },
+  {
+    "id": "w10q10",
+    "week": 10,
+    "question": "What is a healthy coping response when stress builds suddenly?",
+    "options": [
+      "Using mindfulness to regain focus",
+      "Reacting impulsively with frustration",
+      "Escaping responsibilities immediately",
+      "Assigning blame to others"
+    ],
+    "correctAnswer": "Using mindfulness to regain focus"
+  },
+  {
+    "id": "w11q1",
+    "week": 11,
+    "question": "Which of the following best describes academic stress?",
+    "options": [
+      "Stress caused only by exams",
+      "Pressure related to educational demands and expectations",
+      "Stress due to physical illness only",
+      "Stress unrelated to studies"
+    ],
+    "correctAnswer": "Pressure related to educational demands and expectations"
+  },
+  {
+    "id": "w11q2",
+    "week": 11,
+    "question": "What is a common physical symptom of stress?",
+    "options": [
+      "Improved memory",
+      "Muscle tension",
+      "Increased relaxation",
+      "Better sleep"
+    ],
+    "correctAnswer": "Muscle tension"
+  },
+  {
+    "id": "w11q3",
+    "week": 11,
+    "question": "Which breathing technique is commonly used in mindfulness practice?",
+    "options": [
+      "Rapid breathing",
+      "Deep diaphragmatic breathing",
+      "Irregular breathing",
+      "Breath holding"
+    ],
+    "correctAnswer": "Deep diaphragmatic breathing"
+  },
+  {
+    "id": "w11q4",
+    "week": 11,
+    "question": "How does regular physical activity help manage stress?",
+    "options": [
+      "Increases stress hormones",
+      "Reduces mood levels",
+      "Improves mood through endorphin release",
+      "Causes fatigue only"
+    ],
+    "correctAnswer": "Improves mood through endorphin release"
+  },
+  {
+    "id": "w11q5",
+    "week": 11,
+    "question": "Which of the following can improve stress resilience?",
+    "options": [
+      "Negative thinking",
+      "Social support",
+      "Isolation",
+      "Ignoring problems"
+    ],
+    "correctAnswer": "Social support"
+  },
+  {
+    "id": "w11q6",
+    "week": 11,
+    "question": "What happens when stress is prolonged?",
+    "options": [
+      "Improved concentration",
+      "Better relaxation",
+      "Mental and physical exhaustion",
+      "Increased happiness"
+    ],
+    "correctAnswer": "Mental and physical exhaustion"
+  },
+  {
+    "id": "w11q7",
+    "week": 11,
+    "question": "Which activity promotes relaxation during exams?",
+    "options": [
+      "Panic studying",
+      "Short breathing exercises",
+      "Avoiding breaks",
+      "Cramming overnight"
+    ],
+    "correctAnswer": "Short breathing exercises"
+  },
+  {
+    "id": "w11q8",
+    "week": 11,
+    "question": "Time management helps reduce stress by:",
+    "options": [
+      "Increasing confusion",
+      "Organizing tasks effectively",
+      "Avoiding deadlines",
+      "Ignoring priorities"
+    ],
+    "correctAnswer": "Organizing tasks effectively"
+  },
+  {
+    "id": "w11q9",
+    "week": 11,
+    "question": "Which of the following is most helpful for maintaining focus when feeling stressed?",
+    "options": [
+      "Trying to complete multiple tasks simultaneously",
+      "Taking short, planned breaks",
+      "Avoiding all difficult tasks",
+      "Working continuously without rest"
+    ],
+    "correctAnswer": "Taking short, planned breaks"
+  },
+  {
+    "id": "w11q10",
+    "week": 11,
+    "question": "Why is it important to identify personal stress triggers?",
+    "options": [
+      "To completely avoid all responsibilities",
+      "To understand what contributes to stress and respond more effectively",
+      "To increase workload",
+      "To ignore stressful situations"
+    ],
+    "correctAnswer": "To understand what contributes to stress and respond more effectively"
+  },
+  {
+    "id": "w12q1",
+    "week": 12,
+    "question": "Body image refers to:",
+    "options": [
+      "Physical fitness level",
+      "Perception and feelings about one’s body",
+      "Body weight only",
+      "Medical health status"
+    ],
+    "correctAnswer": "Perception and feelings about one’s body"
+  },
+  {
+    "id": "w12q2",
+    "week": 12,
+    "question": "Upward social comparison leads to:",
+    "options": [
+      "Increased confidence always",
+      "Comparing with less successful people",
+      "Comparing with better-looking or more successful people",
+      "Ignoring others"
+    ],
+    "correctAnswer": "Comparing with better-looking or more successful people"
+  },
+  {
+    "id": "w12q3",
+    "week": 12,
+    "question": "Objectification theory suggests that:",
+    "options": [
+      "People ignore appearance",
+      "Individuals see themselves from an outsider’s perspective",
+      "Social media has no effect",
+      "Only men are affected"
+    ],
+    "correctAnswer": "Individuals see themselves from an outsider’s perspective"
+  },
+  {
+    "id": "w12q4",
+    "week": 12,
+    "question": "FOMO stands for:",
+    "options": [
+      "Fear of Missing Out",
+      "Fear of Mental Overload",
+      "Feeling of Mood Oscillation",
+      "Focus on Media Output"
+    ],
+    "correctAnswer": "Fear of Missing Out"
+  },
+  {
+    "id": "w12q5",
+    "week": 12,
+    "question": "Digital fatigue is:",
+    "options": [
+      "Physical illness only",
+      "Mental exhaustion from excessive screen time",
+      "Lack of sleep only",
+      "Internet failure"
+    ],
+    "correctAnswer": "Mental exhaustion from excessive screen time"
+  },
+  {
+    "id": "w12q6",
+    "week": 12,
+    "question": "Which is a key feature of cyberbullying?",
+    "options": [
+      "Face-to-face interaction",
+      "Limited impact",
+      "Online harassment",
+      "Only adults are affected"
+    ],
+    "correctAnswer": "Online harassment"
+  },
+  {
+    "id": "w12q7",
+    "week": 12,
+    "question": "Social media activates which brain chemical?",
+    "options": [
+      "Serotonin",
+      "Dopamine",
+      "Melatonin",
+      "Insulin"
+    ],
+    "correctAnswer": "Dopamine"
+  },
+  {
+    "id": "w12q8",
+    "week": 12,
+    "question": "Curated content means:",
+    "options": [
+      "Raw, unedited life",
+      "Random posts",
+      "Selectively edited and idealized posts",
+      "Scientific data"
+    ],
+    "correctAnswer": "Selectively edited and idealized posts"
+  },
+  {
+    "id": "w12q9",
+    "week": 12,
+    "question": "Which of the following can negatively affect a person’s self-esteem when using social media?",
+    "options": [
+      "Comparing oneself with others online",
+      "Taking regular breaks from social media",
+      "Following positive and supportive content",
+      "Limiting screen time"
+    ],
+    "correctAnswer": "Comparing oneself with others online"
+  },
+  {
+    "id": "w12q10",
+    "week": 12,
+    "question": "Which of the following is a healthy approach to social media use?",
+    "options": [
+      "Checking social media whenever feeling stressed",
+      "Comparing your appearance with influencers",
+      "Setting boundaries around screen time",
+      "Seeking validation through likes and comments"
+    ],
+    "correctAnswer": "Setting boundaries around screen time"
+  }
+]

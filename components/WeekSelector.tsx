@@ -1,32 +1,37 @@
 "use client";
 
-interface WeekSelectorProps {
+const weeks = Array.from({ length: 12 }, (_, i) => i + 1);
+
+export default function WeekSelector({
+  selectedWeek,
+  onSelect,
+  allowAll = true,
+}: {
   selectedWeek: number | null;
   onSelect: (week: number | null) => void;
   allowAll?: boolean;
-}
+}) {
+  const chip = (on: boolean) =>
+    `h-10 min-w-[2.5rem] shrink-0 rounded-md border px-3 text-sm tabular-nums transition-colors sm:h-9 sm:min-w-[2.25rem] ${
+      on
+        ? "border-[#22c55e]/50 bg-[#22c55e]/10 text-[#22c55e]"
+        : "border-[#1f1f1f] text-[#a1a1aa] hover:border-[#3f3f46] hover:text-white"
+    }`;
 
-export default function WeekSelector({ selectedWeek, onSelect, allowAll = true }: WeekSelectorProps) {
   return (
-    <div className="flex flex-wrap gap-1.5">
+    <div
+      role="group"
+      aria-label="Week"
+      className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
+    >
       {allowAll && (
-        <button onClick={() => onSelect(null)}
-          className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
-            selectedWeek === null
-              ? "border-[#22c55e]/40 text-[#22c55e] bg-[#22c55e]/8"
-              : "border-[#1f1f1f] text-[#71717a] hover:border-[#3f3f46] hover:text-white"
-          }`}>
-          All Weeks
+        <button aria-pressed={selectedWeek === null} onClick={() => onSelect(null)} className={chip(selectedWeek === null)}>
+          All
         </button>
       )}
-      {Array.from({ length: 12 }, (_, i) => i + 1).map((week) => (
-        <button key={week} onClick={() => onSelect(week)}
-          className={`w-9 h-9 rounded-lg text-xs font-medium border transition-all ${
-            selectedWeek === week
-              ? "border-[#22c55e]/40 text-[#22c55e] bg-[#22c55e]/8"
-              : "border-[#1f1f1f] text-[#71717a] hover:border-[#3f3f46] hover:text-white"
-          }`}>
-          {week}
+      {weeks.map((w) => (
+        <button key={w} aria-pressed={selectedWeek === w} onClick={() => onSelect(w)} className={chip(selectedWeek === w)}>
+          {w}
         </button>
       ))}
     </div>
